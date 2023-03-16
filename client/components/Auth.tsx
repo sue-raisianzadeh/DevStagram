@@ -2,23 +2,37 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-<<<<<<< HEAD
+
+
 interface Props {
-  updateFeeds: () => void
+  updateFeed: React.Dispatch<
+    React.SetStateAction<
+      {
+        userName: string
+        name: string
+        tags: string
+        description: string
+        image: string
+      }[]
+    >
+  >
 }
 
 const Auth = (props: Props) => {
-=======
-export function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-  const textInput = event.target.name
-  const passInput = event.target.name
-}
-const Auth = () => {
->>>>>>> main
+
   const [input, setInput] = useState({
     userName: '',
     password: '',
   })
+  const navigator = useNavigate()
+
+  function handleSubmit() {
+    props.updateFeed((list: any) =>
+      list.map((data: any) => ({ ...data, ...input }))
+    )
+    navigator('/feed')
+  }
+
   return (
     <div>
 
@@ -27,6 +41,7 @@ const Auth = () => {
         src="/images/group 3 logo.jpg"
         alt="DevStagram logo"
       />
+
 
       <h1 className="header">Think Different Think DevStargram </h1>
 
@@ -37,24 +52,24 @@ const Auth = () => {
           type="text"
           name="userName"
           id="userName"
-          onChange={handleChange}
+          onChange={(e) =>
+            setInput((input) => ({ ...input, userName: e.target.value }))
+          }
         />
         <label htmlFor="author">Password</label>
         <input
           type="password"
           name="password"
           id="password"
-          onChange={handleChange}
+          onChange={(e) =>
+            setInput((input) => ({ ...input, password: e.target.value }))
+          }
         />
 
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={() => handleSubmit()}>Submit</button>
       </form>
     </div>
   )
-}
-
-export function handleSubmit(event: React.FormEvent<HTMLButtonElement>) {
-  event.preventDefault()
 }
 
 export default Auth
