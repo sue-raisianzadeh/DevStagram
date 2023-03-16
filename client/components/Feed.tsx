@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const Feed = () => {
+interface Props {
+  updateFeeds: () => void
+}
+const Feed = (props: Props) => {
   const [input, setInput] = useState({
     name: '',
     tags: '',

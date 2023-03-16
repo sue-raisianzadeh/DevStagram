@@ -2,7 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Auth = () => {
+interface Props {
+  updateFeeds: () => void
+}
+
+const Auth = (props: Props) => {
   const [input, setInput] = useState({
     userName: '',
     Password: '',

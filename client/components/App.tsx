@@ -16,15 +16,11 @@ function App() {
         alt="DevStagram logo"
       />
 
-      <h1 className="header">Think Different Think DevStargram </h1>
-      <p>React development has begun!</p>
-      <Routes>
-        <Route path="/" element={<Listing list={feeds} />} />
-        <Route path="/Auth" element={<Auth updateAuth={setFeeds} />} />
+      {/* <Routes>
+        <Route path="/" element={<Auth updateFeed={setFeeds} />} />
+        <Route path="/list" element={<Listing list={feeds} />} />
         <Route path="/feed" element={<Feed updateFeed={setFeeds} />} />
-      </Routes>
-      {/* <Auth /> */}
-      <Feed />
+      </Routes> */}
     </div>
   )
 }

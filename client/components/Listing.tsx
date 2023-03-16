@@ -1,14 +1,16 @@
+import Card from './Card'
 
-
-const Listing = () => {
-  
+interface Props {
+  list: any[]
+}
+const Listing = (props: Props) => {
   return (
     <div>
-      {feedsData.map(feed => (
+      {props.list.map((feed) => (
         <li>
           <Card title={feed.title} desc={feed.des} />
         </li>
-      )) }
+      ))}
     </div>
   )
 }
