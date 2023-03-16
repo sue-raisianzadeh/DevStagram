@@ -1,8 +1,22 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { text } from 'stream/consumers'
+interface Props {
+  updateFeed: React.Dispatch<
+    React.SetStateAction<
+      {
+        userName: string
+        name: string
+        tags: string
+        description: string
+        image: string
+      }[]
+    >
+  >
+}
 
-const Feed = () => {
+function Feed(props: Props) {
+  const navigator = useNavigate()
   const [input, setInput] = useState({
     name: '',
     tags: '',
@@ -28,6 +42,9 @@ const Feed = () => {
   function handleSubmit(event: React.FormEvent<HTMLButtonElement>) {
     event.preventDefault() // the buttom in Html has default setting to send data to the sever, but
     // we dont have the sever yet. so we need to add this
+
+    props.updateFeed((existingData: any) => [...existingData, input])
+    navigator('/list')
   }
 
   return (

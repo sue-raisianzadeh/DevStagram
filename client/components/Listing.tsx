@@ -1,11 +1,9 @@
-
 import Card from './Card'
 
 interface Props {
   // feedsData: data[]
 }
 const Listing = (props: Props) => {
-  
   return (
     <div>
       {/* {feedsData.map(feed => (
