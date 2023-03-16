@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { text } from 'stream/consumers'
+interface Props {
+  exisitinfList: {}
+}
 
-const Feed = () => {
+function Feed(props: Props) {
   const [input, setInput] = useState({
     name: '',
     tags: '',
