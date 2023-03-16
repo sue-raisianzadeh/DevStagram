@@ -2,20 +2,29 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+export function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+  const textInput = event.target.name
+  const passInput = event.target.name
+}
 const Auth = () => {
   const [input, setInput] = useState({
     userName: '',
-    Password: '',
+    password: '',
   })
   return (
     <div>
-      <form className="text-black flex flex-col">
+      <form>
         <label htmlFor="userName">User name</label>
-        <input type="text" name="user" id="userName" onClick={handleChange} />
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          onChange={handleChange}
+        />
         <label htmlFor="author">Password</label>
         <input
           type="password"
-          name="author"
+          name="password"
           id="password"
           onChange={handleChange}
         />
@@ -24,6 +33,10 @@ const Auth = () => {
       </form>
     </div>
   )
+}
+
+export function handleSubmit(event: React.FormEvent<HTMLButtonElement>) {
+  event.preventDefault()
 }
 
 export default Auth
