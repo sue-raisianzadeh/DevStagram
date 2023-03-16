@@ -32,15 +32,18 @@ const Auth = (props: Props) => {
 
   return (
     <div>
+
       <img
         className="logo"
         src="/images/group 3 logo.jpg"
         alt="DevStagram logo"
       />
 
-      <h1 className="header">Think Different Think DevStargram!!! </h1>
+
+      <h1 className="header">Think Different Think DevStargram </h1>
 
       <form className="text-black flex flex-col">
+
         <label htmlFor="userName">User name</label>
         <input
           type="text"
