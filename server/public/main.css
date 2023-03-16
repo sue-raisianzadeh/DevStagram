@@ -1,13 +1,13 @@
-/* body {
+body {
   background-color: #fcfcfc;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
-} */
+}
 html {
 background: url("./images/logoimg.webp"); 
 background-position: center;
 }
-/* .logo {
+.logo {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -21,4 +21,4 @@ background-position: center;
   display: block;
   font-family: 'Russo One';
     text-align: center;
-} */
+}
