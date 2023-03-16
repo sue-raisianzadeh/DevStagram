@@ -2,10 +2,21 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { text } from 'stream/consumers'
 interface Props {
-  pushingNewdata: {}
+  updateFeed: React.Dispatch<
+    React.SetStateAction<
+      {
+        userName: string
+        name: string
+        tags: string
+        description: string
+        image: string
+      }[]
+    >
+  >
 }
 
 function Feed(props: Props) {
+  const navigator = useNavigate()
   const [input, setInput] = useState({
     name: '',
     tags: '',
@@ -32,8 +43,8 @@ function Feed(props: Props) {
     event.preventDefault() // the buttom in Html has default setting to send data to the sever, but
     // we dont have the sever yet. so we need to add this
 
-    props.pushingNewdata((existingData) => [...existingData, input])
-    navigate('/route/lisitng')
+    props.updateFeed((existingData: any) => [...existingData, input])
+    navigator('/list')
   }
 
   return (
