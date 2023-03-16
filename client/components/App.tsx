@@ -18,6 +18,13 @@ function App() {
         alt="DevStagram logo"
       />
 
+<<<<<<< HEAD
+      {/* <Routes>
+        <Route path="/" element={<Auth updateFeed={setFeeds} />} />
+        <Route path="/list" element={<Listing list={feeds} />} />
+        <Route path="/feed" element={<Feed updateFeed={setFeeds} />} />
+      </Routes> */}
+=======
       <h1 className="header">Think Different Think DevStargram </h1>
       <p>React development has begun!</p>
 
@@ -26,6 +33,7 @@ function App() {
         <Route path="/Auth" element={<Auth updateFeed={setFeeds} />} />
         <Route path="/feed" element={<Feed updateFeed={setFeeds} />} />
       </Routes>
+>>>>>>> main
     </div>
   )
 }

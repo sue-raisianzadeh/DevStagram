@@ -3,7 +3,10 @@ body {
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
 }
-
+html {
+background: url("./images/logoimg.webp"); 
+background-position: center;
+}
 .logo {
   width: 50%;
   margin-left: auto;

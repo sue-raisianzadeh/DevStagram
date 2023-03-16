@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
+
 interface Props {
   updateFeed: React.Dispatch<
     React.SetStateAction<
@@ -15,8 +17,9 @@ interface Props {
     >
   >
 }
-// allgood
+
 const Auth = (props: Props) => {
+
   const [input, setInput] = useState({
     userName: '',
     password: '',

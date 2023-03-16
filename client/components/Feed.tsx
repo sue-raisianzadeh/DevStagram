@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+<<<<<<< HEAD
+interface Props {
+  updateFeeds: () => void
+}
+const Feed = (props: Props) => {
+=======
 import { text } from 'stream/consumers'
 interface Props {
   updateFeed: React.Dispatch<
@@ -17,6 +23,7 @@ interface Props {
 
 function Feed(props: Props) {
   const navigator = useNavigate()
+>>>>>>> main
   const [input, setInput] = useState({
     name: '',
     tags: '',
