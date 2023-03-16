@@ -18,7 +18,7 @@ const Feed = () => {
             type="text"
             name="title"
             id="title"
-            onChange={}
+            // onChange={}
             value={input.name}
           />
         </div>
@@ -29,7 +29,7 @@ const Feed = () => {
             type="text"
             name="tag"
             id="tag"
-            onChange={}
+            // onChange={apple}
             value={input.tags}
           />
         </div>
@@ -39,7 +39,7 @@ const Feed = () => {
             type="text"
             name="introduction"
             id="introduction"
-            onChange={}
+            // onChange={}
             value={input.description}
           />
         </div>
@@ -49,7 +49,7 @@ const Feed = () => {
             type="text"
             name="photo"
             id="photo"
-            onChange={}
+            // onChange={}
             value={input.image}
           />
         </div>
