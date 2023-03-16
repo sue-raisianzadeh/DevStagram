@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { text } from 'stream/consumers'
 interface Props {
-  exisitinfList: {}
+  pushingNewdata: {}
 }
 
 function Feed(props: Props) {
@@ -31,6 +31,9 @@ function Feed(props: Props) {
   function handleSubmit(event: React.FormEvent<HTMLButtonElement>) {
     event.preventDefault() // the buttom in Html has default setting to send data to the sever, but
     // we dont have the sever yet. so we need to add this
+
+    props.pushingNewdata((existingData) => [...existingData, input])
+    navigate('/route/lisitng')
   }
 
   return (
