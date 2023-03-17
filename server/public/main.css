@@ -59,6 +59,19 @@ p {
 
 /* Ke part Start */
 
+.feed{
+  font-family: "Orbitron";
+  background-color: rgb(68, 62, 62);
+  font-size: 50px;
+  border: 5px solid rgb(20, 19, 19);
+  color: rgb(218,207,195 );
+text-align: left;
+padding:  30px;
+margin: 20px 100px 20px ;
+border-radius: 30px;
+
+}
+
 
 
 /* Ke part Ends */
