@@ -8,17 +8,17 @@ interface Props {
 const Listing = (props: Props) => {
   return (
     <div>
-      {props.list.map((feed) => (
-        <li>
-          <Card title={feed.title} desc={feed.des} />
+      {props.list.map((feed, i) => (
+        <li key={i}>
+          <Card
+            userName={feed.userName}
+            name={feed.name}
+            tags={feed.tags}
+            desc={feed.description}
+            image={feed.image}
+          />
         </li>
       ))}
-
-      {/* {feedsData.map(feed => (
-        <li>
-          <Card title={feed.title} desc={feed.des} />
-        </li>
-      ))} */}
     </div>
   )
 }

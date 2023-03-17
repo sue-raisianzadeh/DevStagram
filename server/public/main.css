@@ -1,20 +1,28 @@
 body {
- 
+
   color: #000000;
-   font-style: initial;
- 
-}
-html {
-background: url("./images/logoimg.webp"); 
-background-position: center;
+  font-style: initial;
 
 }
+
+html {
+  background: url("./images/logoimg.webp");
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tim part starts */
+
 .logo {
   width: 30%;
   margin-left: auto;
   margin-right: auto;
   display: block;
-    
+
 }
 
 .header {
@@ -26,11 +34,36 @@ background-position: center;
   font-size: 70px;
 
   text-shadow: 6px 10px 8px rgba(193, 169, 17, 0.6);
-  
+
 }
-p{
+
+p {
   font-family: "Orbitron";
   font-size: 70px;
 
   text-shadow: 6px 10px 8px rgba(193, 169, 17, 0.6);
 }
+
+/* Tim part ends */
+
+
+/* Sue Part Start*/
+
+
+/* Sue Part Ends */
+
+
+
+
+
+
+/* Ke part Start */
+
+
+
+/* Ke part Ends */
+
+
+/* Ian part Start */
+
+/* Ian part Ends */

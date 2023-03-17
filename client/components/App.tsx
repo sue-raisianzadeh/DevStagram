@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Auth from './Auth'
 import Feed from './Feed'
 
@@ -12,18 +12,9 @@ function App() {
 
   return (
     <div className="title">
-      <img
-        className="logo"
-        src="/images/group 3 logo.jpg"
-        alt="DevStagram logo"
-      />
-
-      <h1 className="header">Think Different, Think DevStargram </h1>
-      <p>Sign up</p>
-
       <Routes>
-        <Route path="/" element={<Listing list={feeds} />} />
-        <Route path="/Auth" element={<Auth updateFeed={setFeeds} />} />
+        <Route path="/list" element={<Listing list={feeds} />} />
+        <Route path="/" element={<Auth updateFeed={setFeeds} />} />
         <Route path="/feed" element={<Feed updateFeed={setFeeds} />} />
       </Routes>
     </div>

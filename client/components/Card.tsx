@@ -1,12 +1,24 @@
 import React from 'react'
 
-const Card = () => {
+interface Props {
+  userName: string,
+  name: string,
+  tags: string,
+  desc: string,
+  image: string,
+}
+
+const Card = (props: Props) => {
   return (
     <div>
-      <h2></h2>
-      <h3></h3>
-      <h3></h3>
-      <h3></h3>
+      <ul>
+        <li>{props.userName}</li>
+        <li>{props.name}</li>
+        <li>{props.tags}</li>
+        <li>{props.desc}</li>
+        <li>{props.image}</li>
+      </ul>
+      
     </div>
   )
 }
