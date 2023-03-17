@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface Props {
+  feeds: any
   updateFeed: React.Dispatch<
     React.SetStateAction<
       {
@@ -44,21 +45,23 @@ function Feed(props: Props) {
     // we dont have the sever yet. so we need to add this
 
     props.updateFeed((existingData: any) =>
-      existingData.map((data:any, i:number, arr: any) => {
-        if(i === arr.length - 1) {
+      existingData.map((data: any, i: number, arr: any) => {
+        if (i === arr.length - 1) {
           return {
             ...data,
             name: input.name,
             tags: input.tags,
             description: input.description,
-            imgae: input.image
+            imgae: input.image,
           }
         }
         return {
-          ...data
+          ...data,
         }
       })
     )
+
+    localStorage.setItem('feeds', JSON.stringify(props.feeds))
 
     navigator('/list')
   }
@@ -85,8 +88,8 @@ function Feed(props: Props) {
           />
         </div>
         <div>
-          <label htmlFor="image">Imag</label>
-          <input type="file" name="image" id="image" onChange={handleChange} />
+          <label htmlFor="image">Image URL</label>
+          <input type="text" name="image" id="image" onChange={handleChange} />
         </div>
         <button onClick={handleSubmit}>New Feed</button>
       </form>
