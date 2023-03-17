@@ -18,6 +18,7 @@ interface Props {
       }[]
     >
   >
+
 }
 
 const Card = (props: Props) => {
@@ -35,19 +36,22 @@ const Card = (props: Props) => {
 
 
   return (
-    <div>
-      <ul>
-        <img style={{width: "150px"}} src={props.image} alt="Image" />
-        <li>{props.userName}</li>
-        <li>{props.name}</li>
-        <li>{props.tags}</li>
-        <li>{props.desc}</li>
+
+    <div className="card">
+      <img style={{width: "150px"}} src={props.image} alt="Image" />
+      <h2 className="top">{props.userName}</h2>
+      <ul className="inside">
+        <li>Name: {props.name}</li>
+        <br />
+        <li>Hashtag: {props.tags}</li>
+        <br />
+        <li>Description: {props.desc}</li>
+        <br />
         <li>{props.image}</li>
         <button onClick={() => handleDelete(props.password, props.desc)}>
           Delete
         </button>
       </ul>
-
     </div>
   )
 }

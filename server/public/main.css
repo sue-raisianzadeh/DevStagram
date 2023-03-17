@@ -1,12 +1,10 @@
 body {
-
   color: #000000;
   font-style: initial;
-
 }
 
 html {
-  background: url("./images/logoimg.webp");
+  background: url('./images/logoimg.webp');
   background-position: center;
 }
 
@@ -28,7 +26,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   display: block;
-
 }
 
 .header {
@@ -36,15 +33,14 @@ a {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  font-family: "Orbitron";
+  font-family: 'Orbitron';
   font-size: 70px;
 
   text-shadow: 6px 10px 8px rgba(193, 169, 17, 0.6);
-
 }
 
 p {
-  font-family: "Orbitron";
+  font-family: 'Orbitron';
   font-size: 70px;
 
   text-shadow: 6px 10px 8px rgba(193, 169, 17, 0.6);
@@ -52,24 +48,104 @@ p {
 
 /* Tim part ends */
 
-
 /* Sue Part Start*/
+.form  {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 2cm;
+  font-family: "Orbitron";
+  align-content: center; 
+  justify-content: center;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+.lable {
+  background-color: grey;
+  text-align: center;
+  margin:5px;
+ }
 
+.input {
+  background-color: grey;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  height: 12px;
+  weight:150px;
+  padding: 20px;
+  margin: 5px;
+}
+
+.btn {
+  background-color: gray;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 2cm;
+  font-family: "Orbitron";
+  padding: 5px;
+  padding-bottom: 40px;
+  height: 70px;
+  border-radius: 20px;
+  weight:150px;
+
+}
 
 /* Sue Part Ends */
 
-
-
-
-
-
 /* Ke part Start */
+
+
+.feed{
+  font-family: "Orbitron";
+  background-color: rgb(68, 62, 62);
+  font-size: 50px;
+  border: 5px solid rgb(20, 19, 19);
+  color: rgb(218,207,195 );
+text-align: left;
+padding:  30px;
+margin: 20px 100px 20px ;
+border-radius: 30px;
+
+}
+
 
 
 
 /* Ke part Ends */
 
-
 /* Ian part Start */
+li {
+  list-style: none;
+}
 
+.card {
+  background-color: rgb(68, 62, 62);
+  border-radius: 30px;
+  border: 5px solid rgb(20, 19, 19);
+  color: rgb(218, 207, 195);
+  text-align: center;
+  padding: 15px;
+  margin: 50px 200px 50px;
+  overflow: hidden;
+}
+
+.top {
+  font-family: 'Orbitron';
+  font-size: 32px;
+  text-shadow: 2px 2px 5px black;
+}
+.inside {
+  text-align: left;
+  color: rgb(218, 207, 195);
+  font-family: 'Orbitron';
+  font-size: 16px;
+}
+
+@media screen and (min-width: 400px) {
+}
 /* Ian part Ends */
