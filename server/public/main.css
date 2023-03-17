@@ -15,6 +15,12 @@ a {
   color: inherit;
 }
 
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  
+}
+
 /* Tim part starts */
 
 .logo {

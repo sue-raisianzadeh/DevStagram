@@ -33,6 +33,7 @@ const Listing = (props: Props) => {
           />
         </li>
       ))}
+      <a className="btn" href="/">Go Back</a>
     </div>
   )
 }
