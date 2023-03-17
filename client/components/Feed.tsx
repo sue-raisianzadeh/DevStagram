@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 interface Props {
+  feeds: any
   updateFeed: React.Dispatch<
     React.SetStateAction<
       {
@@ -60,6 +61,8 @@ function Feed(props: Props) {
       })
     )
 
+    localStorage.setItem('feeds', JSON.stringify(props.feeds))
+
     navigator('/list')
   }
 
@@ -113,14 +116,10 @@ function Feed(props: Props) {
           />
         </div>
         <div>
-          <label htmlFor="image">Image: </label>
-          <input
-            type="file"
-            name="image"
-            id="image"
-            onChange={handleChange}
-            style={{ backgroundColor: 'grey', borderRadius: '30px' }}
-          />
+
+          <label htmlFor="image">Image URL</label>
+          <input type="text" name="image" id="image" onChange={handleChange}   style={{ backgroundColor: 'grey', borderRadius: '30px' }} />
+
         </div>
         <div style={{ textAlign: 'center' }}>
           <button
@@ -134,6 +133,7 @@ function Feed(props: Props) {
           >
             New Feed
           </button>
+
         </div>
       </form>
     </div>
