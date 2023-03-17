@@ -44,18 +44,18 @@ function Feed(props: Props) {
     // we dont have the sever yet. so we need to add this
 
     props.updateFeed((existingData: any) =>
-      existingData.map((data:any, i:number, arr: any) => {
-        if(i === arr.length - 1) {
+      existingData.map((data: any, i: number, arr: any) => {
+        if (i === arr.length - 1) {
           return {
             ...data,
             name: input.name,
             tags: input.tags,
             description: input.description,
-            imgae: input.image
+            imgae: input.image,
           }
         }
         return {
-          ...data
+          ...data,
         }
       })
     )
@@ -65,30 +65,76 @@ function Feed(props: Props) {
 
   return (
     <div>
-      <form className="ke__form">
+      <form className="feed">
         <div>
-          <label htmlFor="name">Name</label>
-          <input type="text" name="name" id="name" onChange={handleChange} />
+          <label htmlFor="name">Name: </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onChange={handleChange}
+            style={{
+              backgroundColor: 'grey',
+              width: '400px',
+              height: '50px',
+              borderRadius: '30px',
+            }}
+          />
         </div>
 
         <div>
-          <label htmlFor="tag">Tags</label>
-          <input type="text" name="tags" id="tags" onChange={handleChange} />
+          <label htmlFor="tag">Tags: </label>
+          <input
+            type="text"
+            name="tags"
+            id="tags"
+            onChange={handleChange}
+            style={{
+              backgroundColor: 'grey',
+              width: '400px',
+              height: '50px',
+              borderRadius: '30px',
+            }}
+          />
         </div>
         <div>
-          <label htmlFor="introduction">Description</label>
+          <label htmlFor="introduction">Description: </label>
           <input
             type="text"
             name="description"
             id="description"
             onChange={handleChange}
+            style={{
+              backgroundColor: 'grey',
+              width: '400px',
+              height: '50px',
+              borderRadius: '30px',
+            }}
           />
         </div>
         <div>
-          <label htmlFor="image">Imag</label>
-          <input type="file" name="image" id="image" onChange={handleChange} />
+          <label htmlFor="image">Image: </label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            onChange={handleChange}
+            style={{ backgroundColor: 'grey', borderRadius: '30px' }}
+          />
         </div>
-        <button onClick={handleSubmit}>New Feed</button>
+        <div style={{ textAlign: 'center' }}>
+          <button
+            onClick={handleSubmit}
+            style={{
+              fontFamily: 'Orbitron',
+              width: '150px',
+              height: '60px',
+              borderRadius: '30px',
+            }}
+          >
+            New Feed
+          </button>
+        </div>
       </form>
     </div>
   )
