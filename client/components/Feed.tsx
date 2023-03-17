@@ -8,6 +8,7 @@ interface Props {
       {
         userName: string
         name: string
+        password: string
         tags: string
         description: string
         image: string

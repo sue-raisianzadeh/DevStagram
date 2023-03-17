@@ -8,6 +8,7 @@ interface Props {
     React.SetStateAction<
       {
         userName: string
+        password: string
         name: string
         tags: string
         description: string

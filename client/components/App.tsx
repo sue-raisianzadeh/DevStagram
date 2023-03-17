@@ -10,10 +10,6 @@ function App() {
   const initialState = [...data]
   const [feeds, setFeeds] = useState(initialState)
 
-
-
-
-
   const audio = new Audio('./music.mp3')
   audio.loop = true
 
@@ -31,12 +27,38 @@ function App() {
   return (
     <div className="title">
       <MusicPlayer music="./music.mp3" />
-      <button onClick={stopMusic}>Stop Music</button>
-      <button onClick={playMusic}>Play Music</button>
+      <button
+        style={{
+          fontFamily: 'Orbitron',
+          width: '150px',
+          height: '60px',
+          borderRadius: '30px',
+        }}
+        onClick={stopMusic}
+      >
+        Stop Music
+      </button>
+      <button
+        style={{
+          fontFamily: 'Orbitron',
+          width: '150px',
+          height: '60px',
+          borderRadius: '30px',
+        }}
+        onClick={playMusic}
+      >
+        Play Music
+      </button>
       <Routes>
-        <Route path="/list" element={<Listing list={feeds} updateFeed={setFeeds} />} />
+        <Route
+          path="/list"
+          element={<Listing list={feeds} updateFeed={setFeeds} />}
+        />
         <Route path="/" element={<Auth updateFeed={setFeeds} />} />
-        <Route path="/feed" element={<Feed updateFeed={setFeeds} feeds={feeds} />} />
+        <Route
+          path="/feed"
+          element={<Feed updateFeed={setFeeds} feeds={feeds} />}
+        />
       </Routes>
     </div>
   )

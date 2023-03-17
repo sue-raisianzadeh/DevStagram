@@ -11,6 +11,7 @@ interface Props {
     React.SetStateAction<
       {
         userName: string
+        password: string
         name: string
         tags: string
         description: string
@@ -18,7 +19,6 @@ interface Props {
       }[]
     >
   >
-
 }
 
 const Card = (props: Props) => {
@@ -30,15 +30,13 @@ const Card = (props: Props) => {
         data.filter((el, i) => el.description !== desc)
       )
     } else {
-      alert("Password is incorrect")
+      alert('Password is incorrect')
     }
   }
 
-
   return (
-
     <div className="card">
-      <img style={{width: "150px"}} src={props.image} alt="Image" />
+      <img style={{ width: '150px' }} src={props.image} alt="Image" />
       <h2 className="top">{props.userName}</h2>
       <ul className="inside">
         <li>Name: {props.name}</li>
@@ -47,8 +45,15 @@ const Card = (props: Props) => {
         <br />
         <li>Description: {props.desc}</li>
         <br />
-        <li>{props.image}</li>
-        <button onClick={() => handleDelete(props.password, props.desc)}>
+        <button
+          onClick={() => handleDelete(props.password, props.desc)}
+          style={{
+            fontFamily: 'Orbitron',
+            width: '150px',
+            height: '60px',
+            borderRadius: '30px',
+          }}
+        >
           Delete
         </button>
       </ul>
