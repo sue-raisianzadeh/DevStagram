@@ -19,7 +19,7 @@ a {
   
 }
 
-/* Tim part starts */
+/* baner and heading */
 
 .logo {
   width: 30%;
@@ -46,9 +46,9 @@ p {
   text-shadow: 6px 10px 8px rgba(193, 169, 17, 0.6);
 }
 
-/* Tim part ends */
 
-/* Sue Part Start*/
+
+/*Auth page */
 .form  {
   display: flex;
   flex-direction: column;
@@ -95,9 +95,8 @@ p {
 
 }
 
-/* Sue Part Ends */
 
-/* Ke part Start */
+/* feed page */
 
 
 .feed{
@@ -113,12 +112,7 @@ border-radius: 30px;
 
 }
 
-
-
-
-/* Ke part Ends */
-
-/* Ian part Start */
+/*result page */
 li {
   list-style: none;
 }
@@ -148,7 +142,7 @@ li {
 
 @media screen and (min-width: 400px) {
 }
-/* Ian part Ends */
+/*form */
 
 input {
   font-size: 1.6rem;
